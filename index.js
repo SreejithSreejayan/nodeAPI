@@ -33,7 +33,8 @@ app.get('/:dir/:prgm', (req, res) => {
     if (err) {
       return res.status(500).json({ error: 'Error reading the file.' });
     }
-    res.json(data);
+    res.writeHead(200, { 'Content-Type': 'text/c' });
+    res.end(data);
   });
 });
 
