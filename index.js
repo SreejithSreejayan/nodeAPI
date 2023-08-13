@@ -5,11 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.get('/', async (req, res) => {
-  res.json("Try endpoint '/networkLab' or '/list'");
+  res.json("Try endpoint'/list' to view the labs");
 });
 
 app.get('/list', (req, res) => {
-    res.json({ "1":"network" });
+    res.json({ "1":"network" ,"2":"os"});
 });
 
 app.get('/:dir', (req, res) => {
